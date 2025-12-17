@@ -1,0 +1,167 @@
+:root {
+    --color-bg-dark: #0f1a23;      
+    --color-text: #ffffff;         
+    --color-highlight-cs: #ffcc00; 
+    --color-menu-bg: rgba(0, 0, 0, 0.85); 
+    --color-border: #1e3d59;       
+    --font-main: 'Roboto Mono', monospace; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    line-height: 1.6;
+    
+    
+    background-image: url('../images/CS\ 1.6.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+
+main {
+    padding: 20px 40px 20px 300px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+#sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 280px; 
+    background-color: var(--color-menu-bg); 
+    padding: 80px 20px 20px 20px;
+    border-right: 2px solid var(--color-highlight-cs); 
+    z-index: 1000;
+}
+
+#sidebar-menu ul {
+    list-style: none;
+}
+
+.menu-item {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+
+    color: var(--color-highlight-cs); 
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+}
+
+.menu-item:hover {
+
+    color: var(--color-bg-dark); 
+    background-color: var(--color-highlight-cs); 
+    padding-left: 10px;
+}
+
+.highlight-item {
+   
+    color: red; 
+    text-shadow: 0 0 5px red;
+}
+
+.highlight-item:hover {
+    background-color: red;
+    color: white;
+}
+
+.disabled-item {
+    color: #444; 
+    font-size: 1.2em;
+    pointer-events: none; 
+}
+
+.separator {
+    color: #444;
+    margin: 10px 0;
+    text-align: left;
+}
+
+
+
+
+.seccion {
+    margin-bottom: 40px;
+    padding: 25px;
+ 
+    background-color: rgba(0, 0, 0, 0.9); 
+    border: 1px solid var(--color-border);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.seccion h2 {
+    color: var(--color-text);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-highlight-cs); 
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-shadow: 0 0 5px var(--color-highlight-cs);
+}
+
+
+
+.item-educacion, .item-experiencia {
+    margin-bottom: 25px;
+    padding: 10px;
+    border-left: 3px solid var(--color-highlight-cs);
+}
+
+.item-educacion h3, .item-experiencia h3 {
+    color: var(--color-text);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.institucion, .empresa, .periodo {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #cccccc;
+}
+
+.responsabilidades {
+    margin-top: 10px;
+    margin-left: 20px;
+    list-style-type: '>> '; 
+}
+
+
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 280px; 
+    right: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-top: 2px solid var(--color-highlight-cs);
+    font-size: 0.8em;
+    color: #999999;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 999;
+}
+
+#footer .status {
+    color: var(--color-highlight-cs);
+    font-weight: bold;
+}
+
+
