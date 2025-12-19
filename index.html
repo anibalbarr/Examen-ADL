@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Cristian Calderon</title>
+  <link rel="stylesheet" href="assets/style/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="brand"><span>CV</span> Cristian Calderon</div>
+    <div class="nav-links">
+      <a href="#perfil">Perfil</a>
+      <a href="#educacion">Educacion</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#portafolio">Portafolio</a>
+    </div>
+    <a class="btn" href="https://github.com/CristianCris01" target="_blank" rel="noreferrer">Github</a>
+  </nav>
+
+  <div class="page">
+    <header>
+      <div class="hero-card">
+        <span class="badge">Disponible para nuevas oportunidades</span>
+        <h1>Cristian Calderon</h1>
+        <p>Desarrollador Full Stack con foco en crear productos digitales escalables y agradables de usar. Me motiva colaborar con equipos multidisciplinarios y entregar valor tangible en cada iteracion.</p>
+        <div class="pill-row">
+          <span class="pill">JavaScript</span>
+          <span class="pill">HTML/CSS</span>
+          <span class="pill">Bootstrap</span>
+          <span class="pill">Arquitectura limpia</span>
+        </div>
+      </div>
+      <div class="hero-card" id="perfil">
+        <div class="avatar"><img class="avatar-img" src="assets/image/perfil.jpg" alt="Foto de perfil" /></div>
+        <div class="pill-row" style="margin-top:16px;">
+          <span class="pill">San Jose de Maipo, Chile</span>
+          <span class="pill">thesircristian@gmail.com</span>
+          <span class="pill">+569 3307 9184</span>
+          <span class="pill">32 años</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="educacion">
+      <div class="section-title">
+        <h2>Educacion</h2>
+        <span class="badge">Formacion</span>
+      </div>
+      <div class="card">
+        <div class="edu-item">
+          <div>
+            <strong>Curso FullStack</strong>
+            <div class="edu-meta">Curso FullSatck en progreso 2025-2026</div>
+          </div>
+          <div class="edu-meta">Proyecto final destacado</div>
+        </div>
+       
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <div class="section-title">
+        <h2>Experiencia</h2>
+        <span class="badge">1 año</span>
+      </div>
+      <div class="card">
+        <div class="exp-item">
+          <div>
+            <strong>Desarrollador Web</strong>
+            <div class="exp-meta">2025 - Actualidad - Remoto</div>
+            <p>Desarrollador remoto de paginas web con lenguaje HTML/CSS/JavaScript </p>
+          </div>
+          <div class="pill">HTML/CSS/JavaScript</div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="portafolio">
+      <div class="section-title">
+        <h2>Portafolio</h2>
+      </div>
+      <div class="grid two-col portfolio-grid">
+        <figure class="card portfolio-card">
+          <img class="portfolio-img" src="assets/image/iguana.jpg" alt="Proyecto Iguana" />
+          <figcaption class="portfolio-caption">Iguana Page</figcaption>
+        </figure>
+        <figure class="card portfolio-card">
+          <img class="portfolio-img" src="assets/image/cuppon.jpg" alt="Proyecto Cuppon" />
+          <figcaption class="portfolio-caption">Cuppon App</figcaption>
+        </figure>
+        <figure class="card portfolio-card">
+          <img class="portfolio-img" src="assets/image/Vinyl.jpg" alt="Proyecto Vinyl" />
+          <figcaption class="portfolio-caption">Vinyl Store</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer>
+      <div>Hecho con HTML y CSS - Cristian Calderon</div>
+      <div>
+        <a href="thesircristian@gmail.com">Correo</a> -
+        
+        <a href="https://github.com/CristianCris01" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </footer>
+  </div>
+  <script>
+    const portfolioImgs = Array.from(document.querySelectorAll('.portfolio-img'));
+    portfolioImgs.forEach((img) => {
+      img.addEventListener('click', () => {
+        const isOpen = img.classList.contains('enlarged');
+        portfolioImgs.forEach((other) => other.classList.remove('enlarged'));
+        document.body.classList.remove('body-locked');
+        if (!isOpen) {
+          img.classList.add('enlarged');
+          document.body.classList.add('body-locked');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
